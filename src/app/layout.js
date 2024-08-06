@@ -11,6 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="icon" href="/scissors-logo.png" sizes="any" />
+      <title>Scissors App - The Next Big Thing To Shorten Link</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
