@@ -1,10 +1,14 @@
 // Code for the Login page
+'use client'
 
 import Link from "next/link";
 import { Label, Input, Button } from "../ui/SignupInput";
 import Image from "next/image";
+import { GET } from "../api/auth/[...nextauth]/route";
 
 export default function Login() {
+
+    
   return (
     <>
       <section className="bg-gradient-to-b from-blue-500 to-transparent">
@@ -41,7 +45,7 @@ export default function Login() {
                 <h2 className="my-6 text-center text-3xl font-bold tracking-tight text-foreground">
                   Log in
                 </h2>
-                <form className="space-y-6" action="#" method="POST">
+                <form className="space-y-6" >
                   <div className="">
                     <Label htmlFor="email" className="block text-sm font-medium text-muted-foreground">
                       Email
@@ -73,7 +77,7 @@ export default function Login() {
                       />
                     </div>
                   </div>
-                  <Button href="#" type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Button>
+                  <Button href="#"  type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Button>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -90,7 +94,7 @@ export default function Login() {
                   </div>
                 </form>
                 <div className="mt-5 text-center flex flex-col gap-4">
-                  <span ><hr/>
+                  <span ><hr />
                     <h2>Or continue with</h2>
                   </span>
                   <div className="flex mt-3 gap-5 justify-center">
@@ -125,12 +129,13 @@ export default function Login() {
                       Sign up
                     </Link>
                   </div>
-                   <div className="text-center text-xs">
-                  <p>By continuing, you agree to Scissors&apos;s <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Terms of Service</Link> and acknowledging that you have read <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Privacy Policy</Link> to learn how we collect, use and share your data.</p>
+                  <div className="text-center text-xs">
+                    <p>By continuing, you agree to Scissors&apos;s <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Terms of Service</Link> and acknowledging that you have read <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Privacy Policy</Link> to learn how we collect, use and share your data.</p>
+                  </div>
+
+                
                 </div>
 
-                </div>
-               
               </div>
             </div>
           </div>
