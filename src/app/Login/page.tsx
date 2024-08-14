@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { Label, Input, Button } from "../ui/SignupInput";
 import Image from "next/image";
-import { GET } from "../api/auth/[...nextauth]/route";
+
 
 export default function Login() {
 
