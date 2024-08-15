@@ -5,6 +5,15 @@ import { Label, Input, Button } from "../ui/SignupInput";
 import Image from "next/image";
 
  export default function Signup() {
+  function testClick(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault()
+    console.log('input changed')
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault()
+    console.log('button clicked')
+  }
   return (
     <>
       <section className="bg-gradient-to-b from-blue-500 to-transparent mb-32">
@@ -40,7 +49,9 @@ import Image from "next/image";
                       id="name"
                       name="name"
                       type="text"
+                      onChange={testClick}
                       required
+                      value='text'
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
@@ -53,6 +64,8 @@ import Image from "next/image";
                       id="email"
                       name="email"
                       type="text"
+                      value="text"
+                      onChange={testClick}
                       autoComplete="email"
                       required
                       placeholder="Your email address"
@@ -71,17 +84,20 @@ import Image from "next/image";
                         type="password"
                         autoComplete="current-password"
                         required
+                        value="text"
+                      onChange={testClick}
                         placeholder="Your password"
                         className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                       />
                       <p className="text-gray-300 font-normal text-xs">* Minimum 8 characters, including at least 1 number</p>
                     </div>
                   </div>
-                  <Button href="#" type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Sign up</Button>
+                  <Button href="#" type="submit" onClick={handleSubmit} className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Sign up</Button>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Input type="checkbox" id="remember-me" name="remember-me" className="h-4 w-4 rounded" />
+                      <Input type="checkbox" id="remember-me" value="text"
+                      onChange={testClick} name="remember-me" className="h-4 w-4 rounded" />
                       <Label htmlFor="remember-me" className="ml-2 block text-sm text-muted-foreground">
                         Remember me
                       </Label>
@@ -95,30 +111,30 @@ import Image from "next/image";
                     <h2>Or continue with</h2>
                   </span>
                   <div className="flex mt-3 gap-5 justify-center">
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border ">
+                    <div className="flex gap-2 text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border " >
                       <Image
                         src="/google.png"
                         width={24}
                         height={24}
                         alt="Google logo"
                       /> Google
-                    </Button>
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
+                    </div>
+                    <div className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border"  >
                       <Image
                         src="/facebook.png"
                         width={24}
                         height={24}
                         alt="Facebook logo"
                       /> Facebook
-                    </Button>
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
+                    </div>
+                    <div className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border" >
                       <Image
                         src="/vercel.svg"
                         width={40}
                         height={24}
                         alt="Vercel logo"
                       /> Vercel
-                    </Button>
+                    </div>
                   </div>
                   <div className="flex gap-2 text-sm justify-center">
                     <p>Already have an account?</p>

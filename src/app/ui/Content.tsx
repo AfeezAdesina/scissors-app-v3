@@ -3,6 +3,14 @@ import Image from "next/image";
 import { Button, Input, Textarea } from "./SignupInput";
 
 export default function Content() {
+    function testClick(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault()
+        console.log('input changed')
+    }
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault()
+        console.log('button clicked')
+    }
     return (
         <>
             <main className="flex-1 mt-6">
@@ -54,6 +62,10 @@ export default function Content() {
                         <div className="flex justify-between">
                             <Input
                                 type="search"
+                                id="search"
+                                name="search"
+                                value="text"
+                                onChange={testClick}
                                 placeholder="Type or paste a link (URL)"
                                 className=" w-full rounded-3xl bg-background border pl-8 md:w-[200px] lg:w-[480px]"
                             />
@@ -171,13 +183,16 @@ export default function Content() {
                         </div>
                         <div className="flex gap-1 items-center px-2 w-fit border-2 border-gray-600 rounded-full py-2 ">
                             <Button
-                                href="#"
+                                href="#" onClick={testClick}
+                                type="submit"
                                 className="rounded-full px-6 py-2  hover:text-white  hover:bg-slate-600 active:bg-slate-600"
                             >
                                 Pay monthly
                             </Button>
                             <Button
                                 href="#"
+                                onClick={testClick}
+                                type="submit"
                                 className="rounded-full px-6 py-2 hover:text-white hover:bg-slate-600 active:bg-slate-600"
                             >
                                 Pay annually
@@ -258,7 +273,8 @@ export default function Content() {
                                     <p>Includes 1 Branded Domain</p>
                                 </div>
                                 <Button
-                                    href="#"
+                                    href="#" onClick={testClick}
+                                type="submit"
                                     className="rounded-full w-full visited:bg-gray-600 px-4 py-2 text-gray-600 border border-gray-600 font-bold"
                                 >
                                     Buy Now
@@ -304,7 +320,8 @@ export default function Content() {
                                     <p>2 Workspaces</p>
                                 </div>
                                 <Button
-                                    href="#"
+                                    href="#" onClick={testClick}
+                                type="submit"
                                     className="rounded-full w-full visited:bg-gray-600 px-4 py-2 text-gray-600 border border-gray-600 font-bold"
                                 >
                                     Buy Now
@@ -351,7 +368,8 @@ export default function Content() {
                                     <p>2 Workspaces</p>
                                 </div>
                                 <Button
-                                    href="#"
+                                    href="#" onClick={testClick}
+                                type="submit"
                                     className="rounded-full w-full visited:bg-gray-600 px-4 py-2 text-gray-600 border border-gray-600 font-bold"
                                 >
                                     Buy Now
@@ -432,10 +450,12 @@ export default function Content() {
                         </div>
                         <div className="mt-12 max-w-md mx-auto">
                             <form className="grid gap-4" >
-                                <Input type="text" placeholder="Name:" className="w-full border border-white p-2 rounded-lg" />
-                                <Input type="email" placeholder="Email:" className="w-full border border-white p-2 rounded-lg" />
-                                <Textarea placeholder="Message:" className="w-full border border-white p-2 rounded-lg" rows={5} />
-                                <Button type="submit" className="w-full border bg-white p-2 rounded-lg text-gray-600 font-bold">
+                                <Input type="text" placeholder="Name:"  name="text"
+                                value="text" id="input"
+                                onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
+                                <Input type="email" placeholder="Email:" id="input" value="email" name="email" onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
+                                <Textarea placeholder="Message:" id="text-area" name="textarea" value="textarea" onChange={testClick} className="w-full border border-white p-2 rounded-lg" rows={5} />
+                                <Button type="submit" onClick={handleSubmit} className="w-full border bg-white p-2 rounded-lg text-gray-600 font-bold">
                                     Submit
                                 </Button>
                             </form>

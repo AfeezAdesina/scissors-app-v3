@@ -7,7 +7,14 @@ import Image from "next/image";
 
 
 export default function Login() {
-
+  function testClick(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault()
+    console.log('input changed')
+  }
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault()
+    console.log('button clicked')
+  }
     
   return (
     <>
@@ -56,6 +63,8 @@ export default function Login() {
                       type="text"
                       autoComplete="email"
                       required
+                      value="text" 
+                      onChange={testClick}
                       placeholder="Your email address"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
@@ -70,6 +79,7 @@ export default function Login() {
                         id="password"
                         name="password"
                         type="password"
+                        value="text" onChange={testClick}
                         autoComplete="current-password"
                         required
                         placeholder="Your password"
@@ -77,11 +87,11 @@ export default function Login() {
                       />
                     </div>
                   </div>
-                  <Button href="#"  type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Button>
+                  <Button href="#" onClick={handleSubmit} type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Button>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Input type="checkbox" id="remember-me" name="remember-me" className="h-4 w-4 rounded" />
+                      <Input type="checkbox" id="remember-me" name="remember-me" value="text" onChange={testClick} className="h-4 w-4 rounded" />
                       <Label htmlFor="remember-me" className="ml-2 block text-sm text-muted-foreground">
                         Remember me
                       </Label>
@@ -98,30 +108,30 @@ export default function Login() {
                     <h2>Or continue with</h2>
                   </span>
                   <div className="flex mt-3 gap-5 justify-center">
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border ">
+                    <div className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border ">
                       <Image
                         src="/google.png"
                         width={24}
                         height={24}
                         alt="Google logo"
                       /> Google
-                    </Button>
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
+                    </div>
+                    <div   className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
                       <Image
                         src="/facebook.png"
                         width={24}
                         height={24}
                         alt="Facebook logo"
                       /> Facebook
-                    </Button>
-                    <Button className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
+                    </div>
+                    <div className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
                       <Image
                         src="/vercel.svg"
                         width={40}
                         height={24}
                         alt="Vercel logo"
                       /> Vercel
-                    </Button>
+                    </div>
                   </div>
                   <div className="flex gap-2 text-sm justify-center">
                     <p>Don&apos;t have a Scissors account yet?</p>
