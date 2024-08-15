@@ -66,7 +66,7 @@ export default function Content() {
                                 type="search"
                                 id="search"
                                 name="search"
-                                value="Type or paste a link (URL)"
+                                value=""
                                 onChange={testClick}
                                 placeholder="Type or paste a link (URL)"
                                 className=" w-full rounded-3xl bg-background border pl-8 md:w-[200px] lg:w-[480px]"
