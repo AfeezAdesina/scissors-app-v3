@@ -52,7 +52,7 @@ import Image from "next/image";
                       type="text"
                       onChange={testClick}
                       required
-                      value='Your name or company names'
+                      value=''
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
@@ -65,7 +65,7 @@ import Image from "next/image";
                       id="email"
                       name="email"
                       type="text"
-                      value="Your email address"
+                      value=""
                       onChange={testClick}
                       autoComplete="email"
                       required
@@ -85,7 +85,7 @@ import Image from "next/image";
                         type="password"
                         autoComplete="current-password"
                         required
-                        value="Yourpassword"
+                        value=""
                       onChange={testClick}
                         placeholder="Your password"
                         className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
@@ -97,7 +97,7 @@ import Image from "next/image";
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Input type="checkbox" id="remember-me" value="text"
+                      <Input type="checkbox" id="remember-me" value=""
                       onChange={testClick} name="remember-me" className="h-4 w-4 rounded" />
                       <Label htmlFor="remember-me" className="ml-2 block text-sm text-muted-foreground">
                         Remember me

@@ -27,36 +27,36 @@ export default function DemoPage() {
             <div className='flex gap-6'>
               <div className='flex flex-col'>
                 <Label required htmlFor="first-name" className="text-sm font-light">First Name<span className='text-red-600'>*</span></Label>
-                <Input type="text" id="first-name" name="first-name" value="text" onChange={testClick} required className="bg-gray-100 rounded-md p-2 " />
+                <Input type="text" id="first-name" name="first-name" value="" onChange={testClick} required className="bg-gray-100 rounded-md p-2 " />
               </div>
               <div className='flex flex-col '>
                 <Label htmlFor="last-name"className="text-sm font-light">Last Name<span className='text-red-600'>*</span></Label>
-                <Input type="text" id="last-name" name="last-name" value="text" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full" required />
+                <Input type="text" id="last-name" name="last-name" value="" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full" required />
               </div>
             </div>
             <div>
               <Label htmlFor="email"className="text-sm font-light">Business Email<span className='text-red-600'>*</span></Label>
-              <Input type="email" id="email" name="email" value="text" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full"  required />
+              <Input type="email" id="email" name="email" value="" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full"  required />
             </div>
             <div>
               <Label htmlFor="message"className="text-sm font-light">Message<span className='text-red-600'>*</span></Label>
-              <Textarea id="message" name="message" value="text" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full" required rows={5} />
+              <Textarea id="message" name="message" value="" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full" required rows={5} />
             </div>
             <div>
               <Label htmlFor="contact"className="text-sm font-light">Contact Number<span className='text-red-600'>*</span></Label>
               <div className='flex gap-4'>
-                <Input type="" id="contact" name="contact" value="text" onChange={testClick} className="bg-gray-100 rounded-md p-2 max-w-20" placeholder="+234" disabled required />
-                <Input type="" id="contact" name="contact" value="text" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full"  required />
+                <Input type="" id="contact" name="contact" value="" onChange={testClick} className="bg-gray-100 rounded-md p-2 max-w-20" placeholder="+234" disabled required />
+                <Input type="" id="contact" name="contact" value="" onChange={testClick} className="bg-gray-100 rounded-md p-2 w-full"  required />
               </div>
             </div>
             
             <div className='mt-5'>
               <div className="flex gap-3 items-center">
-                <Input type="checkbox" name="" id="" value="text" onChange={testClick} required />
+                <Input type="checkbox" name="" id="" value="" onChange={testClick} required />
                 <Label htmlFor="" className="text-sm">I hereby declare that the information provided above is true and correct <span className='text-red-600'>*</span></Label>
               </div>
               <div className="flex gap-3 items-center">
-                <Input type="checkbox" name="" id="" value="text" onChange={testClick}/>
+                <Input type="checkbox" name="" id="" value="" onChange={testClick}/>
                 <Label htmlFor="" className="text-sm">I have read and agree to the <Link href="#" className='underline text-blue-600'>Privacy Policy<span className='text-red-600'>*</span></Link></Label>
               </div>
             </div>
