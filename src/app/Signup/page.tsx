@@ -52,7 +52,7 @@ import Image from "next/image";
                       type="text"
                       onChange={testClick}
                       required
-                      value='text'
+                      value='Your name or company names'
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
@@ -65,7 +65,7 @@ import Image from "next/image";
                       id="email"
                       name="email"
                       type="text"
-                      value="text"
+                      value="Your email address"
                       onChange={testClick}
                       autoComplete="email"
                       required
@@ -85,7 +85,7 @@ import Image from "next/image";
                         type="password"
                         autoComplete="current-password"
                         required
-                        value="text"
+                        value="Yourpassword"
                       onChange={testClick}
                         placeholder="Your password"
                         className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"

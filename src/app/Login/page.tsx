@@ -63,7 +63,7 @@ export default function Login() {
                       type="text"
                       autoComplete="email"
                       required
-                      value="text" 
+                      value="Your email address" 
                       onChange={testClick}
                       placeholder="Your email address"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
@@ -79,7 +79,7 @@ export default function Login() {
                         id="password"
                         name="password"
                         type="password"
-                        value="text" onChange={testClick}
+                        value="Password" onChange={testClick}
                         autoComplete="current-password"
                         required
                         placeholder="Your password"
