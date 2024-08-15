@@ -91,7 +91,7 @@ export default function Login() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Input type="checkbox" id="remember-me" name="remember-me" value="text" onChange={testClick} className="h-4 w-4 rounded" />
+                      <Input type="checkbox" id="remember-me" name="remember-me" value="" onChange={testClick} className="h-4 w-4 rounded" />
                       <Label htmlFor="remember-me" className="ml-2 block text-sm text-muted-foreground">
                         Remember me
                       </Label>

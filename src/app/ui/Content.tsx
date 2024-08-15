@@ -453,7 +453,7 @@ export default function Content() {
                         <div className="mt-12 max-w-md mx-auto">
                             <form className="grid gap-4" >
                                 <Input type="text" placeholder="Name:"  name="text"
-                                value="text" id="input"
+                                value="" id="input"
                                 onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
                                 <Input type="email" placeholder="Email:" id="input" value="email" name="email" onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
                                 <Textarea placeholder="Message:" id="text-area" name="textarea" value="textarea" onChange={testClick} className="w-full border border-white p-2 rounded-lg" rows={5} />
