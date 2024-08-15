@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Header from '../ui/Header';
 import Footer from '../ui/Footer';

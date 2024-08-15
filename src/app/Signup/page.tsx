@@ -1,4 +1,5 @@
 // Code for the Login page
+'use client';
 
 import Link from "next/link";
 import { Label, Input, Button } from "../ui/SignupInput";
