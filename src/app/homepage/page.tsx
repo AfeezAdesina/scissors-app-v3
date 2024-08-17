@@ -1,7 +1,7 @@
-import Content from "@/src/app/ui/Content";
+import Content from "@/src/app/ui/content";
 import Footer from "@/src/app/ui/Footer";
 import Header from "../ui/Header";
-import Faq from "../ui/Faq";
+import Faq from "../ui/faq";
 
 
 export default function Homepage() {
