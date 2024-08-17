@@ -7,13 +7,12 @@ export const Label = ({ children, htmlFor, ...props }) => {
   };
   
  
-  export const Input = ({ type, id, name, value, onChange, ...props }) => {
+  export const Input = ({ type, id, name, onChange, ...props }) => {
     return (
       <input
         type={type}
         id={id}
         name={name}
-        value={value}
         onChange={onChange}
         {...props}
       />
@@ -29,7 +28,6 @@ export const Label = ({ children, htmlFor, ...props }) => {
       <textarea
         id={id}
         name={name}
-        value={value}
         onChange={onChange}
         {...props}
       />

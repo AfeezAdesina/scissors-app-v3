@@ -4,6 +4,8 @@
 import Link from "next/link";
 import { Label, Input, Button } from "../ui/SignupInput";
 import Image from "next/image";
+import { useState } from "react";
+
 
 
 export default function Login() {
@@ -14,7 +16,11 @@ export default function Login() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>){
     event.preventDefault()
     console.log('button clicked')
+  
   }
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
     
   return (
     <>
@@ -63,7 +69,6 @@ export default function Login() {
                       type="text"
                       autoComplete="email"
                       required
-                      value="" 
                       onChange={testClick}
                       placeholder="Your email address"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
@@ -79,15 +84,17 @@ export default function Login() {
                         id="password"
                         name="password"
                         type="password"
-                        value="" onChange={testClick}
+                      
+                        onChange={testClick}
                         autoComplete="current-password"
                         required
                         placeholder="Your password"
                         className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                       />
                     </div>
+                  <Link href='/homepage' className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Link>
                   </div>
-                  <Button href="#" onClick={handleSubmit} type="submit" className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Button>
+                  
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -114,9 +121,9 @@ export default function Login() {
                         width={24}
                         height={24}
                         alt="Google logo"
-                      /> Google
+                      />
                     </div>
-                    <div   className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
+                    {/* <div  className="flex gap-2  text-sm font-bold items-center rounded-full px-6 py-2 border-gray-500 border">
                       <Image
                         src="/facebook.png"
                         width={24}
@@ -131,11 +138,11 @@ export default function Login() {
                         height={24}
                         alt="Vercel logo"
                       /> Vercel
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex gap-2 text-sm justify-center">
                     <p>Don&apos;t have a Scissors account yet?</p>
-                    <Link href="/Signup" className="font-medium text-primary text-blue-600 " prefetch={false}>
+                    <Link href="/signup" className="font-medium text-primary text-blue-600 " prefetch={false}>
                       Sign up
                     </Link>
                   </div>

@@ -5,8 +5,7 @@ import Link from 'next/link';
 function Header() {
   return (
     <>
-    <div></div>
-    <header className="px-8 py-4 lg:px-4  h-14 flex justify-between items-center fixed top-0 left-0 right-0  overflow-hidden bg-white">
+    <header className="px-8 py-8 lg:px-4 h-14 flex justify-between items-center fixed top-0 left-0 right-0  overflow-hidden bg-white">
           <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center" prefetch={true}>
               <Image
@@ -32,7 +31,7 @@ function Header() {
                 Domain
               </Link>
               <Link
-                href="#Pricing"
+                href="#products"
                 className="text-lg font-sm hover:underline underline-offset-4 font-extralight text-gray-800"
                 prefetch={false}
               >
@@ -61,7 +60,7 @@ function Header() {
               className="text-md font-bold p-2 rounded-full bg-gray-800 px-5 py-1 text-white hover:bg-cyan-600 shadow transition-colors"
               prefetch={false}
             >
-              Log In
+              Log Out
             </Link>
           </nav>
         </header>

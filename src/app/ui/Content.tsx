@@ -32,7 +32,7 @@ export default function Content() {
                                     className="text-lg font-medium p-2 rounded-full bg-gray-800 px-10 py-3 text-white hover:bg-cyan-600 shadow transition-colors"
                                     prefetch={false}
                                 >
-                                    Sign Up Now
+                                    Get Started
                                 </Link>
                                 <Link
                                     href="/demopage"
@@ -66,7 +66,6 @@ export default function Content() {
                                 type="search"
                                 id="search"
                                 name="search"
-                                value=""
                                 onChange={testClick}
                                 placeholder="Type or paste a link (URL)"
                                 className=" w-full rounded-3xl bg-background border pl-8 md:w-[200px] lg:w-[480px]"
@@ -134,45 +133,7 @@ export default function Content() {
                     </div>
 
                 </section>
-                <section id="about" className="w-full py-12 md:py-24 lg:py-32 hidden">
-                    <div className="container px-4 md:px-6">
-                        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-                            <div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                    About Bright Lights Electric
-                                </h2>
-                                <p className="mt-4 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    Bright Lights Electric is a leading provider of high-quality
-                                    LED and electrical installation services. Founded in 2010,
-                                    we have a team of experienced technicians who are dedicated
-                                    to delivering exceptional results for our clients.
-                                </p>
-                                <p className="mt-4 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                                    With a focus on innovation and customer satisfaction, we
-                                    have built a reputation for excellence in the industry. Our
-                                    commitment to using the latest technologies and techniques
-                                    ensures that our clients receive the best possible service.
-                                </p>
-                            </div>
-                            <div className="grid gap-4">
-                                <Image
-                                    src="/placeholder.svg"
-                                    width={550}
-                                    height={310}
-                                    alt="About Image 1"
-                                    className="rounded-xl object-cover"
-                                />
-                                <Image
-                                    src="/placeholder.svg"
-                                    width={550}
-                                    height={310}
-                                    alt="About Image 2"
-                                    className="rounded-xl object-cover"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
                 <section id="products" className="w-full px-10 py-12 md:py-24 lg:py-32">
                     <div className="container px-4 md:px-6">
                         <div className="text-center space-y-4">
@@ -453,10 +414,10 @@ export default function Content() {
                         <div className="mt-12 max-w-md mx-auto">
                             <form className="grid gap-4" >
                                 <Input type="text" placeholder="Name:"  name="text"
-                                value="" id="input"
+                                 id="input"
                                 onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
-                                <Input type="email" placeholder="Email:" id="input" value="email" name="email" onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
-                                <Textarea placeholder="Message:" id="text-area" name="textarea" value="textarea" onChange={testClick} className="w-full border border-white p-2 rounded-lg" rows={5} />
+                                <Input type="email" placeholder="Email:" id="input"  name="email" onChange={testClick} className="w-full border border-white p-2 rounded-lg" />
+                                <Textarea placeholder="Message:" id="text-area" name="textarea"  onChange={testClick} className="w-full border border-white p-2 rounded-lg" rows={5} />
                                 <Button type="submit" onClick={handleSubmit} className="w-full border bg-white p-2 rounded-lg text-gray-600 font-bold">
                                     Submit
                                 </Button>
