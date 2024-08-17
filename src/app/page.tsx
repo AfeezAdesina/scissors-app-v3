@@ -1,8 +1,8 @@
 import React from "react";
-import Faq from "./ui/faq";
+import Faq from "./ui/Faq";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
-import Content from "./ui/content"
+import Content from "./ui/Content"
 import Login from "./Login/page";
 
 export default function Home() {
