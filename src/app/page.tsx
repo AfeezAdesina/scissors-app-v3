@@ -3,7 +3,7 @@ import Faq from "./ui/faq";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Content from "./ui/content"
-import Login from "./login/page";
+import Login from "./Login/page";
 
 export default function Home() {
   return (
