@@ -52,7 +52,7 @@ import Image from "next/image";
                       type="text"
                       onChange={testClick}
                       required
-                      value=''
+                      value={name}
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
@@ -63,9 +63,8 @@ import Image from "next/image";
                     </Label>
                     <Input
                       id="email"
-                      name="email"
+                      name="Email"
                       type="text"
-                      value=""
                       onChange={testClick}
                       autoComplete="email"
                       required
@@ -81,11 +80,11 @@ import Image from "next/image";
                       </Label>
                       <Input
                         id="password"
-                        name="password"
+                        name="Password"
                         type="password"
                         autoComplete="current-password"
                         required
-                        value=""
+                      
                       onChange={testClick}
                         placeholder="Your password"
                         className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
@@ -97,8 +96,8 @@ import Image from "next/image";
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Input type="checkbox" id="remember-me" value=""
-                      onChange={testClick} name="remember-me" className="h-4 w-4 rounded" />
+                      <Input type="checkbox" id="remember-me" name="rememberMe" 
+                      onChange={testClick}  className="h-4 w-4 rounded" />
                       <Label htmlFor="remember-me" className="ml-2 block text-sm text-muted-foreground">
                         Remember me
                       </Label>
@@ -139,7 +138,7 @@ import Image from "next/image";
                   </div>
                   <div className="flex gap-2 text-sm justify-center">
                     <p>Already have an account?</p>
-                    <Link href="/Login" className="font-medium text-primary text-blue-600 " prefetch={false}>
+                    <Link href="/login" className="font-medium text-primary text-blue-600 " prefetch={false}>
                       Login
                     </Link>
                   </div>
