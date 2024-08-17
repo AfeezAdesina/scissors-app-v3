@@ -23,7 +23,7 @@ export const Label = ({ children, htmlFor, ...props }) => {
 
   
 
-  export const Textarea = ({ id, name, value, onChange, ...props }) => {
+  export const Textarea = ({ id, name, onChange, ...props }) => {
     return (
       <textarea
         id={id}
