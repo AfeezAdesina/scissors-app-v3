@@ -52,7 +52,6 @@ import Image from "next/image";
                       type="text"
                       onChange={testClick}
                       required
-                      value={name}
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
