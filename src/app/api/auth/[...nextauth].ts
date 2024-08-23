@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
@@ -27,20 +26,3 @@ import CredentialsProvider from "next-auth/providers/credentials";
 })
 
 export { handler as GET, handler as POST };
-=======
-import NextAuth from "next-auth";
-import GithubProvider from "next-auth/providers/github";
-
-export const authOptions = {
-  // Configure one or more authentication providers
-  providers: [
-    GithubProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-    // ...add more providers here
-  ],
-}
-
-export default NextAuth(authOptions)
->>>>>>> 1563cf47c47f749eb736dd46aaf4c3f41f48daa8
