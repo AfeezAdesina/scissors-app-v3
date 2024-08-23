@@ -1,15 +1,28 @@
 import NextAuth from "next-auth";
-import GithubProvider from "next-auth/providers/github";
+import CredentialsProvider from "next-auth/providers/credentials";
 
-export const authOptions = {
+ const handler = NextAuth({
   // Configure one or more authentication providers
   providers: [
-    GithubProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-    // ...add more providers here
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: {  },
+        password: {   }
+      },
+      async authorize(credentials, req): Promise<any> {
+        // Add logic here to look up the user from the credentials supplied
+        const user = { id: 1, name: "J Smith", email: ''};
+        if (user) {
+          
+          return user
+        } else {
+          return null
+        }
+      }
+      
+    })
   ],
-}
+})
 
-export default NextAuth(authOptions)
+export { handler as GET, handler as POST };

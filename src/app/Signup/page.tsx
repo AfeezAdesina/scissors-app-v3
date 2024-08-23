@@ -4,16 +4,27 @@
 import Link from "next/link";
 import { Label, Input, Button } from "../ui/SignupInput";
 import Image from "next/image";
+import { FormEvent } from "react";
 
  export default function Signup() {
-  function testClick(event: React.FormEvent<HTMLFormElement>){
+  function testClick(event: FormEvent<HTMLFormElement>){
     event.preventDefault()
     console.log('input changed')
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+  async function handleSubmit(event: FormEvent<HTMLFormElement>){
     event.preventDefault()
-    console.log('button clicked')
+    const formData = new FormData(event.currentTarget);
+    await fetch('./api/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: formData.get('email'),
+        password: formData.get('password'),
+      })
+    })
   }
   return (
     <>
@@ -41,8 +52,8 @@ import Image from "next/image";
                 <h2 className="my-6 text-center text-3xl font-bold tracking-tight text-foreground">
                   Sign up
                 </h2>
-                <form className="space-y-6" action="#" method="POST">
-                  <div>
+                <form className="space-y-6" action="POST" method="POST" id='my-form' onSubmit={handleSubmit}>
+                  {/* <div>
                     <Label htmlFor="name" className="block text-sm font-medium text-muted-foreground">
                       Name
                     </Label>
@@ -55,14 +66,14 @@ import Image from "next/image";
                       placeholder="Your name or company names"
                       className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                     />
-                  </div>
+                  </div> */}
                   <div className="">
                     <Label htmlFor="email" className="block text-sm font-medium text-muted-foreground">
                       Business Email
                     </Label>
                     <Input
                       id="email"
-                      name="Email"
+                      name="email"
                       type="text"
                       onChange={testClick}
                       autoComplete="email"
@@ -79,7 +90,7 @@ import Image from "next/image";
                       </Label>
                       <Input
                         id="password"
-                        name="Password"
+                        name="password"
                         type="password"
                         autoComplete="current-password"
                         required
@@ -137,7 +148,7 @@ import Image from "next/image";
                   </div>
                   <div className="flex gap-2 text-sm justify-center">
                     <p>Already have an account?</p>
-                    <Link href="/login" className="font-medium text-primary text-blue-600 " prefetch={false}>
+                    <Link href="/Login" className="font-medium text-primary text-blue-600 " prefetch={false}>
                       Login
                     </Link>
                   </div>

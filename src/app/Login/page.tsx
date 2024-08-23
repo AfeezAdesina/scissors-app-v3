@@ -14,16 +14,17 @@ export default function Login() {
     console.log('input changed')
   }
   function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+  
     event.preventDefault()
     console.log('button clicked')
   
   }
-
+    
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
     
   return (
-    <>
+    <> 
       <section className="bg-gradient-to-b from-blue-500 to-transparent">
         <header className="">
           <div >
@@ -81,21 +82,21 @@ export default function Login() {
                         Password
                       </Label>
                       <Input
+                      
                         id="password"
                         name="password"
                         type="password"
-                      
                         onChange={testClick}
                         autoComplete="current-password"
                         required
                         placeholder="Your password"
-                        className="block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
-                      />
+                        className=" block w-full appearance-none rounded-full border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm " 
+                        />
+                  
+
                     </div>
                   <Link href='/homepage' className="rounded-full w-full py-3 text-center  text-sm font-medium bg-gray-600 hover:bg-blue-600 text-white">Login</Link>
                   </div>
-                  
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <Input type="checkbox" id="remember-me" name="remember-me" value="" onChange={testClick} className="h-4 w-4 rounded" />
@@ -144,7 +145,10 @@ export default function Login() {
                     <p>Don&apos;t have a Scissors account yet?</p>
                     <Link href="/signup" className="font-medium text-primary text-blue-600 " prefetch={false}>
                       Sign up
+
+                
                     </Link>
+
                   </div>
                   <div className="text-center text-xs">
                     <p>By continuing, you agree to Scissors&apos;s <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Terms of Service</Link> and acknowledging that you have read <Link href="#" className="font-medium text-blue-600 text-xs" prefetch={false}>Privacy Policy</Link> to learn how we collect, use and share your data.</p>
