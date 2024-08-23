@@ -71,7 +71,7 @@ export default function Content() {
                                 className=" w-full rounded-3xl bg-background border pl-8 md:w-[200px] lg:w-[480px]"
                             />
                             <Link
-                                href="#"
+                                href="/url-page"
                                 className="text-lg px-4 py-2 font-semibold text-white p-2 rounded-full bg-gray-600 hover:bg-cyan-600 shadow transition-colors"
                                 prefetch={false}
                             >
